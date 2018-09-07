@@ -1,0 +1,28 @@
+header{
+    border-style: solid;
+    text-align: center;
+    
+}
+
+.flex-container{
+  
+    padding: 15px;
+    border-style: solid;
+    width: 13%;
+}
+.flex-container div{
+    border-style: solid;
+    width: 70px;
+    height: 70px;
+    border-color: red;
+    border-radius: 20%;
+}
+
+.flex-container p{
+    color: red;
+    
+}
+footer{
+    border-style: solid;
+    text-align: center;  
+}
