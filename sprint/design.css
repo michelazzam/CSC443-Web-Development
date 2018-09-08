@@ -1,28 +1,51 @@
-header{
-    border-style: solid;
-    text-align: center;
-    
+article{
+        display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
-.flex-container{
-  
-    padding: 15px;
-    border-style: solid;
-    width: 13%;
+
+section{
+   
+    display: flex;
 }
-.flex-container div{
+
+
+.info{
+    flex-grow: 1;
+   border-style: solid;
+    padding: 10px;
+        width: 80px;
+    
+}
+section .info div{
     border-style: solid;
     width: 70px;
     height: 70px;
     border-color: red;
     border-radius: 20%;
-}
-
-.flex-container p{
-    color: red;
     
 }
-footer{
+
+section .info p{
+    
+    color: red;
+    padding: 15px;
+}
+
+span{
+        border-style: solid;
+        display: -webkit-flex;
+      display: flex;
+       padding: 20px;
+    
+}
+
+footer, header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
     border-style: solid;
-    text-align: center;  
+    height: 50px;
 }
