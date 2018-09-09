@@ -1,13 +1,21 @@
 article{
-        display: flex;
+    display: flex;
     flex-direction: column;
     height: 100vh;
+    
 }
 
+body , html{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    
+}
 
 section{
-   
+
     display: flex;
+    height: calc(100% - 106px);
 }
 
 
@@ -38,6 +46,7 @@ span{
         display: -webkit-flex;
       display: flex;
        padding: 20px;
+    overflow-y:scroll;
     
 }
 
@@ -46,6 +55,14 @@ footer, header {
     justify-content: center;
     align-items: center;
     font-size: 24px;
-    border-style: solid;
+    border-style: solid ;
     height: 50px;
+    
+   
+    
+}
+footer{
+     bottom: 0;
+    position: fixed;
+    width: 100%;
 }
