@@ -5,6 +5,7 @@ while(parseInt(choice)<1 || parseInt(choice)>5)
 choice=prompt("pick a number between 1 and 5");
     if(parseInt(choice)>0 && parseInt(choice)<6)
     {
+        var score=0;
         var imgNb=parseInt(choice);
        
         var image=["image1.JPG","image2.JPG","image3.JPG","image4.JPG","image5.JPG"];
@@ -71,19 +72,29 @@ choice=prompt("pick a number between 1 and 5");
             for(let i=0;i<card.length;i++)
             {
                 for(let j=0;j<card.length;j++)
-            {
+                {
                 if(i===j)
                 {
                     break;
+
                 }else{
-                        if(card[i].clicked===card[j].clicked && card[i].clicked===1 && card[j].clicked)
+                        if(card[i].clicked===card[j].clicked && card[i].clicked===1 )
                         {
                             if(card[i].src===card[j].src)
                             {
                             setTimeout(remove,500);
                             function remove(){
+
+                                card[i].clicked=0;
+                                card[j].clicked=0;
+
                                 card[i].imgHtml.style.display="none";
                                 card[j].imgHtml.style.display="none";
+        
+                               score=parseInt(score)+3;
+
+                               let sc=document.querySelector('.scorre');
+                               sc.innerHTML="score: "+score;
                                 }
                                 
                             }
@@ -96,6 +107,14 @@ choice=prompt("pick a number between 1 and 5");
                 
                                     card[i].clicked=0;
                                     card[j].clicked=0;
+
+                                    if(score>0)
+                                    {
+                                    score=parseInt(score)-1;
+
+                                    let sc=document.querySelector('.scorre');
+                                    sc.innerHTML="score: "+score;
+                                    }
                                 }
                         
                             }
@@ -105,4 +124,5 @@ choice=prompt("pick a number between 1 and 5");
             }
         }
     }
+    
 }
