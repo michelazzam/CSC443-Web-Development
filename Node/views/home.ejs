@@ -1,0 +1,19 @@
+<html>
+    <body>
+      
+
+          <br>
+          <ul>
+          <% 
+          dataAll.forEach(e =>{ %>
+     
+            <h1><li><%= e.id %> ,  <%= e.desc_en %>, <%= e.desc_ar %> </li></h1>
+     
+            <%  }); %>
+        </ul>
+          <form method="post" action="addStudent">
+            <input type="text" name="name">
+            <button type="submit" >click</button>
+          </form>
+    </body>
+</html>
